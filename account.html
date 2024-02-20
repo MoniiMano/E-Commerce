@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="./redstore.css">
+    <link href="https://Tonts.googleapis.com/css2?
+fami Ly=Poppins :wght@300 ; 400 ;500;600; 700&display=swap"
+rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+   
+</head>
+<body>
+
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="logo">
+                </div>
+                <nav>
+                    <ul id="MenuItem">
+                        <li><a href="./redstor.html" class="menu"> Home</a></li>
+                        <li><a href="./products.html" class="menu"> Product</a></li>
+                        <li><a href="" class="menu"> About</a></li>
+                        <li><a href="" class="menu"> Details</a></li>
+                        <li><a href="./account.html" class="menu">  Account</a></li>
+                    </ul>
+                </nav>
+                <a href="./cart.html"><img class="cart" src="./images/cart.png"></a>
+                <img src="./images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+         </div>
+  <!---------------------------------Account details(account.html-file)--------------------------->
+  <div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <img src="./images/image1.png" class="account-img">
+            </div>
+            <div class="col-1">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="indicator">
+                    </div>
+                    <form id="loginform" >
+                        <input type="text" placeholder="UserName">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn"> Login</button>
+                        <a href=""> Forgot Password</a>
+                    </form>
+                    <form  id="regform">
+                        <input type="text" placeholder="UserName">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn"> Register</button>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+  <!----------------------Footer Section------------------------->
+  <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col1 col-4" >
+                <h3>Download Our App </h3>
+                <p> Download our app for Android and IOS
+                    mobile phone.
+                    </p>
+                    <div class="app">
+                        <img src="./images/play-store.png">
+                        <img src="./images/app-store.png">
+                    </div> 
+            </div>
+            <div class="footer-col2 col-4">
+                <img src="./images/logo-white.png">
+                <p> Our purpose is to sustainably make
+                    the pleasure and benefits of sports
+                    accesible to the many.
+                    
+                    </p>
+            </div>
+            <div class="footer-col3 col-4">
+                <h3>Useful Link </h3>
+                <ul>
+                    <li>Coupon</li>
+                    <li>Blogpost</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+                
+            </div>
+            <div class="footer-col4 col-4">
+                <h3>Follow Us </h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyr"> Copyright 2021 - © Md Nakibul Hassan</p>
+    </div>
+  </div>
+  <!-----------------------js for menu icon(redstore.html-file)--------------------->
+  <script>
+    var MenuItem=document.getElementById("MenuItem");
+    MenuItem.style.maxHeight="0px";
+    function menutoggle()
+    {
+        if( MenuItem.style.maxHeight=="0px")
+        {
+            MenuItem.style.maxHeight="200px";
+        }
+        else
+        {
+            MenuItem.style.maxHeight="0px";
+        }
+    }
+  </script>
+  <!------------------------js for toggle form(account.html-file)-------------------->
+  <script>
+
+    var lform=document.getElementById("loginform");
+    var rform=document.getElementById("regform");
+    var indi=document.getElementById("indicator");
+
+    function register()
+    {
+        lform.style.transform="translateX(0px)";
+        rform.style.transform="translateX(0px)";
+        indi.style.transform="translateX(100px)";
+    }
+    function login()
+    {
+        lform.style.transform="translateX(300px)";
+        rform.style.transform="translateX(300px)";
+        indi.style.transform="translateX(0px)";
+    }
+  </script>
+  
+</body>
+</html>
